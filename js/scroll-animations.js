@@ -44,3 +44,24 @@ ScrollReveal().reveal('#our_services > section:first-of-type > h2', {scale: 0, d
 ScrollReveal().reveal('.service-card', {delay: 500, scale: 0.25, duration: 1000});
 ScrollReveal().reveal('.service-content > h4', {delay: 1000, distance:'100px', origin: 'left', duration: 1000});
 ScrollReveal().reveal('.service-content > p', {delay: 1500, distance:'100px', origin: 'top', duration: 1000});
+
+// Reveal Animations for About Us section
+ScrollReveal().reveal('#about_us > section:first-of-type > h2', {scale: 0, duration: 1000});
+ScrollReveal().reveal('.about-image', {delay: 500, distance: '100px', origin: 'left', duration: 1000});
+ScrollReveal().reveal('.about-cards .about-card:nth-child(1)', {delay: 700, distance: '100px', origin: 'right', duration: 1000});
+ScrollReveal().reveal('.about-cards .about-card:nth-child(2)', {delay: 900, distance: '100px', origin: 'right', duration: 1000});
+ScrollReveal().reveal('.about-cards .about-card:nth-child(3)', {delay: 1100, distance: '100px', origin: 'right', duration: 1000});
+ScrollReveal().reveal('.about-cards .about-card:nth-child(4)', {delay: 1300, distance: '100px', origin: 'right', duration: 1000});
+
+ScrollReveal().reveal('.why-us', {
+    delay: 300,
+    distance: '50px',
+    origin: 'bottom',
+    duration: 1000
+});
+
+ScrollReveal().reveal('.animated-line', {
+    delay: 600,
+    scale: 0.5,
+    duration: 1000
+});

@@ -19,15 +19,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     // HAMBURGER ICON Navigation
-    hamburgerIcon.addEventListener("click", event => {
-        event.stopPropagation();
-        mobileNav.classList.toggle("show");
-    });
-
-    document.addEventListener("click", event => {
-        if (!mobileNav.contains(event.target) && event.target !== hamburgerIcon) {
-            mobileNav.classList.remove("show");
-        }
+    hamburgerIcon.addEventListener('click', () => {
+        mobileNav.classList.toggle('active');
     });
 
     // Banners Auto Slider Function
@@ -142,3 +135,15 @@ document.addEventListener("DOMContentLoaded", () => {
     });
     
 });
+
+// About Image Slider
+const aboutImageSlider = document.getElementById("about_image_slider");
+const totalAboutImages = aboutImageSlider.children.length;
+let currentAboutImage = 0;
+
+function rotateAboutImages() {
+    currentAboutImage = (currentAboutImage + 1) % totalAboutImages;
+    aboutImageSlider.style.transform = `translateX(-${currentAboutImage * 100}%)`;
+}
+
+setInterval(rotateAboutImages, 3000);
