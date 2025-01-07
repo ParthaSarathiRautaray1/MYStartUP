@@ -18,11 +18,11 @@ document.addEventListener("DOMContentLoaded", () => {
     let currentBannerIndex = 0;
 
 
-    // HAMBURGER ICON Navigation
-    hamburgerIcon.addEventListener('click', () => {
-        mobileNav.classList.toggle('active');
+    document.addEventListener('DOMContentLoaded', function() {
+        hamburgerIcon.addEventListener('click', function() {
+            mobileNav.classList.toggle('show');
+        });
     });
-
     // Banners Auto Slider Function
     let moveDirection = "right";
     let moveToNextBanner = () => {

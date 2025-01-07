@@ -835,15 +835,40 @@ input.error, select.error {
 
 
 .closing {
-    background-color: var(--safron);
-    padding-top: 5rem;
-    padding-bottom: 5rem;
+    /* background-color: var(--safron);
+    padding-top: 4rem;
+    padding-bottom: 4rem;
     display: flex;
     flex-direction: column;
-    gap: 3rem;
+    gap: 2rem;
     align-items: center;
-    scroll-margin-top: 5rem;
+    scroll-margin-top: 5rem; */
+
+  padding: 2rem;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  margin: 2rem 0;
+  scroll-margin-top: 5rem;
 }
+
+.closing h2 {
+    margin-bottom: 0.5rem;
+    
+  }
+
+
+  .closing p {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+  
+
+  
+  .contact-item a {
+    padding: 0.5rem 1rem;
+  }
 
 .closing > :first-child {
     display: flex;
@@ -861,17 +886,210 @@ input.error, select.error {
 }
 
 .cta {
+    display: inline-block;
+    margin-top: 1rem;
     color: var(--white);
     background-color: var(--polynesian-blue);
     text-align: center;
     width: min(100%, 20rem);
-    padding: 1rem .5rem;
+    padding: 0.8rem 1.5rem;
     border-radius: 5px;
+    transition: transform 0.3s ease;
 }
 
 
+/* contactus */
 
 
+.contact-info {
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+  
+  .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1rem;
+  }
+  
+  .contact-item i {
+    color: #000000;
+    font-size: 1rem;
+  }
+
+
+
+  .contact-info {
+    margin: 0.5rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  }
+  
+  .contact-item {
+    opacity: 0;
+    transform: translateX(-50px);
+    animation: slideInFromLeft 0.6s ease forwards;
+  }
+  .contact-item i {
+    font-size: 1.5rem;
+    color: #4a90e2;
+    transition: all 0.3s ease;
+  }
+
+  .contact-item:hover i {
+    transform: rotate(360deg) scale(1.2);
+  }
+  
+  .contact-item span {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .contact-item span::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #4a90e2;
+    transition: width 0.3s ease;
+  }
+  
+  .contact-item:hover span::after {
+    width: 100%;
+  }
+  
+  @keyframes slideInFromLeft {
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes pulse {
+    0% {
+      box-shadow: 0 0 0 0 rgba(74, 144, 226, 0.4);
+    }
+    70% {
+      box-shadow: 0 0 0 10px rgba(74, 144, 226, 0);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgba(74, 144, 226, 0);
+    }
+  }
+  
+  .contact-item:nth-child(1) { animation-delay: 0.2s; }
+  .contact-item:nth-child(2) { animation-delay: 0.4s; }
+  .contact-item:nth-child(3) { animation-delay: 0.6s; }
+  
+  /* Add pulse animation on hover */
+  .contact-item:hover {
+    animation: pulse 1.5s infinite;
+  }
+
+  .contact-item a {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.05);
+  }
+  
+  .contact-item:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  
+.contact-item a:hover {
+    background: rgba(74, 144, 226, 0.1);
+    transform: translateX(10px);
+  }
+  
+  .contact-item:nth-child(3) {
+    animation-delay: 0.4s;
+  }
+  
+  .bounce i {
+    animation: bounce 2s infinite;
+  }
+  
+  .slide-in {
+    display: inline-block;
+    position: relative;
+  }
+  
+  .contact-item:hover i {
+    transform: scale(1.2);
+  }
+  
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-5px);
+    }
+    60% {
+      transform: translateY(-3px);
+    }
+  }
+  
+
+  @media screen and (max-width: 768px) {
+    .contact-info {
+      width: 90%;
+      margin: 0.5rem auto;
+      padding: 0.8rem;
+    }
+    
+    .contact-item a {
+      font-size: 14px;
+      padding: 0.4rem 0.8rem;
+    }
+    
+    .contact-item i {
+      font-size: 1.2rem;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .contact-info {
+      width: 85%;
+      padding: 0.6rem;
+    }
+    
+    .contact-item a {
+      font-size: 13px;
+      padding: 0.3rem 0.6rem;
+    }
+    
+    .contact-item i {
+      font-size: 1.1rem;
+    }
+  }
+  
+
+
+
+  
 
 /* FOOTER */
 footer {
