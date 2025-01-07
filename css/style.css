@@ -99,6 +99,9 @@ header, .header-filler {
     justify-content: space-between;
     align-items: center;
 }
+.defination{
+    font-size: 1.5rem;
+}
 
 header {
     position: fixed;
@@ -364,6 +367,8 @@ input.error, select.error {
 }
 
 /* OUR PACKAGES SECTION */
+
+
 .our-package {
     scroll-margin-top: 5rem;
 }
@@ -506,6 +511,110 @@ input.error, select.error {
           grid-template-columns: 1fr;
       }
   }
+
+
+  /* service section */
+
+  main > :where(section:not(.our-package):not(.our-services)) {
+    padding: 3.5rem 2.5rem;
+}
+
+  .our-services {
+    padding: 0 !important;
+    scroll-margin-top: 5rem;
+}
+
+.our-services > section:first-of-type {
+    color: var(--white);
+    background-color: var(--polynesian-blue);
+    text-align: center;
+    padding: 6rem 0;
+    width: 100%;
+}
+
+.our-services > hr {
+    width: 10rem;
+}
+
+.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+    padding: 2rem 1rem;
+}
+
+.our-services .services {
+    padding: 2rem 2.5rem;
+}
+
+.service-card {
+    background:#9bf3ad;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+.service-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.service-image svg {
+    margin-top: 35px;
+    width: 48px;
+    height: 48px;
+    fill: rgb(57, 56, 56);
+    transition: transform 0.3s ease;
+}
+.service-card:hover .service-image svg {
+    transform: scale(1.1);
+}
+
+.service-content {
+    padding: 1.5rem;
+}
+
+.service-title {
+    color:#ff9921 ;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+.description{
+    color:rgb(75, 74, 74);
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+    .services {
+        grid-template-columns: 1fr;
+        padding: 1rem 0;
+    }
+    
+    .service-card {
+        margin: 0 auto;
+        max-width: 350px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 .closing {
     background-color: var(--safron);
     padding-top: 5rem;
@@ -650,3 +759,6 @@ footer > section > a {
 .toast.error {
     background-color: #f44336;
 }
+
+
+

@@ -38,3 +38,9 @@ ScrollReveal().reveal('.cta', {delay: 1000, scale:0, duration: 1000});
 // Reveal Animations for Footer
 ScrollReveal().reveal('footer > .logo', {scale: 0, duration: 1000});
 ScrollReveal().reveal('footer > :not(.logo)', {delay: 1000, distance: '75px', origin: 'top', duration: 1000});
+
+// Reveal Animations for Services section
+ScrollReveal().reveal('#our_services > section:first-of-type > h2', {scale: 0, duration: 1000});
+ScrollReveal().reveal('.service-card', {delay: 500, scale: 0.25, duration: 1000});
+ScrollReveal().reveal('.service-content > h4', {delay: 1000, distance:'100px', origin: 'left', duration: 1000});
+ScrollReveal().reveal('.service-content > p', {delay: 1500, distance:'100px', origin: 'top', duration: 1000});
