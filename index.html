@@ -199,6 +199,7 @@
                   >Please enter a valid name!</span
                 >
               </section>
+
               <section class="email-input">
                 <label for="email_input">Email Address:</label>
                 <input
@@ -223,20 +224,33 @@
                   >Please enter a valid Contact Number!</span
                 >
               </section>
+
+              <section class="email-input">
+                <label for="whatsapp_input">WhatsApp Number:</label>
+                <input
+                  type="tel"
+                  id="whatsapp_input"
+                  name="whatsapp_input"
+                  placeholder="+91 9090786756"
+                  pattern="[0-9]{10}"
+                  required
+                />
+                <span class="error-msg" id="whatsapp_input_error"
+                  >Please enter a valid WhatsApp number!</span
+                >
+              </section>
+
               <section class="interest-input">
                 <label for="interest_input">What are you interested in?</label>
                 <select id="interest_input" name="interest_input">
                   <option value="">Select option</option>
+                  <option value="Puri-all">Puri-Konark-Chilika</option>
+                  <option value="Puri-konark">Puri-Konark</option>
+                  <option value="Puri">Puri</option>
                   <option value="Travel">Travel</option>
-                  <option value="History">History</option>
                   <option value="Culinary">Heritage and Architecture</option>
                   <option value="Culture">Nature and Wildlife</option>
-                  <option value="Religion">
-                    Tribal and Cultural Experiences
-                  </option>
                   <option value="Other">Coastal Beauty</option>
-                  <option value="Other">Handicrafts and Shopping</option>
-                  <option value="Other">Photography and Birdwatching</option>
                   <option value="Other">other.</option>
                 </select>
                 <span class="error-msg" id="interest_input_error"
@@ -600,42 +614,39 @@
               focus on the journey.
             </p>
 
-             <!-- contact info -->
+            <!-- contact info -->
             <div class="contact-info">
-                <div class="contact-item animate-contact">
-                    <a href="tel:+919078859867">
+              <div class="contact-item animate-contact">
+                <a href="tel:+919078859867">
                   <i class="fas fa-phone"></i>
                   <span>+91 9078859867</span>
-                  </a>
+                </a>
+              </div>
 
-                </div>
-                
-                <div class="contact-item animate-contact">
-                    <a href="mailto:utkalavoyages@gmail.com">
+              <div class="contact-item animate-contact">
+                <a href="mailto:utkalavoyages@gmail.com">
                   <i class="fas fa-envelope"></i>
                   <span>utkalavoyages@gmail.com</span>
                 </a>
-                </div>
-              
-                <div class="contact-item animate-contact">
-                    <a href="https://wa.me/919078859867" target="_blank">
+              </div>
+
+              <div class="contact-item animate-contact">
+                <a href="https://wa.me/919078859867" target="_blank">
                   <i class="fab fa-whatsapp"></i>
                   <span>+91 9078859867</span>
                 </a>
-                </div>
-
-                <div class="contact-item animate-contact">
-                    <a href="https://maps.app.goo.gl/dxDMGgbwJYNpLJLs7" target="_blank">
-                        <i class="fas fa-location-dot"></i>
-                        <span>Bhubaneswar, Odisha</span>
-                    </a>
-                </div>
               </div>
 
-
-           
-          
-             
+              <div class="contact-item animate-contact">
+                <a
+                  href="https://maps.app.goo.gl/dxDMGgbwJYNpLJLs7"
+                  target="_blank"
+                >
+                  <i class="fas fa-location-dot"></i>
+                  <span>Bhubaneswar, Odisha</span>
+                </a>
+              </div>
+            </div>
           </div>
           <a href="#contact_us" class="cta">PLAN YOUR TRIP NOW!</a>
         </section>
@@ -652,7 +663,7 @@
           By
           <a
             href="https://www.linkedin.com/in/parthasarathi-rautaray-53100731a/"
-            style="color:rgb(58, 58, 235); font-weight: 900"
+            style="color: rgb(58, 58, 235); font-weight: 900"
             >Partha Sarathi Rautaray</a
           >
         </section>
@@ -660,6 +671,10 @@
     </div>
     <script src="js/scroll-animations.js"></script>
     <script src="js/script.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="js/email-automation.js"></script>
+    
   </body>
 </html>
 
@@ -669,4 +684,7 @@
   href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Text:wght@400;600&display=swap"
   rel="stylesheet"
 />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+/>
