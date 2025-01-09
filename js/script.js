@@ -18,12 +18,24 @@ document.addEventListener("DOMContentLoaded", () => {
     let currentBannerIndex = 0;
 
 
-    document.addEventListener('DOMContentLoaded', function() {
-        hamburgerIcon.addEventListener('click', function() {
-            mobileNav.classList.toggle('show');
+    hamburgerIcon.addEventListener('click', () => {
+        mobileNav.classList.toggle('show');
+    });
+
+    // Close menu when clicking a link
+    const mobileLinks = document.querySelectorAll('.mobile-nav a');
+    mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            mobileNav.classList.remove('show');
         });
     });
-    // Banners Auto Slider Function
+
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!mobileNav.contains(e.target) && !hamburgerIcon.contains(e.target)) {
+            mobileNav.classList.remove('show');
+        }
+    });    // Banners Auto Slider Function
     let moveDirection = "right";
     let moveToNextBanner = () => {
         if (currentBannerIndex === (totalBanners - 1)) {
