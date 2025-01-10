@@ -311,32 +311,16 @@ input.error, select.error {
     display: inline-block;
 }
 
+
+
 /* REVIEW SECTION */
-.review {
-    max-width: 30rem;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
 
-.review > q, .reviewer-job  {
-    color: var(--dark-gray);
-}
 
-.reviewer-info {
-    display: flex;
-    align-items: center;
-    gap: 1.25rem;
-}
 
-.reviewer-info > img {
-    width: 3rem;
-    border: solid 2px var(--light-gray);
-    border-radius: 50%;
-    object-fit: cover;
-    object-position: center;
-}
+
+
+
+
 
 /* BENEFITS */
 .benefits {
@@ -832,6 +816,279 @@ input.error, select.error {
         font-size: 1rem;  
     }
 }
+
+
+/* review / testimonial section */
+
+.reviews {
+    padding: 0 !important;
+    scroll-margin-top: 5rem;
+}
+
+.reviews h1 {
+    color: var(--white);
+    background-color: var(--polynesian-blue);
+    text-align: center;
+    padding: 6rem 0;
+    width: 100% ;
+    margin: 0;
+}
+
+
+.all-include{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+    padding-top: 2rem;
+    
+}
+
+.review-body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: url(/assets/img/banners/bg.png.jpg) #030728 no-repeat center;
+}
+
+.slider-wrapper{
+    overflow: hidden;
+    max-width: 1200px;
+    margin:0 70px 55px;
+}
+
+.card-list .card-item{
+    color:#fff;
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(30px);
+    user-select: none;
+    padding:35px;
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.card-list .card-item .user-img{
+    width:150px;
+    height:150px;
+    border-radius: 50%;
+    margin-bottom: 40px;
+    border: 3px solid #fff;
+    padding:4px;
+}
+
+.card-list .card-item .user-profession{
+    font-size: 1.1rem;
+    color:#e3e3e3;
+    font-weight: 500;
+    margin:14px 0 40px;
+}
+
+.card-list .card-item .message-button{
+    font-size: 1.25rem;
+    padding:10px 35px;
+    color: #030728;
+    background-color: #fff;
+    border-radius: 6px;
+    font-size: 500;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: 0.2s ease;
+}
+
+.card-list .card-item .message-button:hover{
+    color: #fff;
+    background-color: rgba(255,255,255,0.1);
+    border: 1px solid #fff;
+    
+}
+
+.slider-wrapper .swiper-pagination-bullet{
+    background-color: #fff;
+    height:15px;
+    width:15px;
+}
+.slider-wrapper .swiper-slide-button{
+    color:#fff;
+    margin-top: -50px;
+    transition: 0.2 ease ;
+}
+.slider-wrapper .swiper-slide-button:hover{
+    color:#4658ff;
+
+}
+
+.card-item h2{
+    
+    font-size: 1.5rem;
+}
+
+
+
+
+.card-list .card-item .user-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px; /* Reduced from 40px */
+    border: 3px solid #fff;
+    padding: 4px;
+}
+
+/* .user-reaction {
+    font-size: 0.9rem; 
+    font-style: italic;
+    margin-top: 10px;
+    color: #999;    
+} */
+
+.review-container {
+    max-width: 300px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 15px;
+    margin-top: 15px;
+}
+
+.user-reaction {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #fff;
+    text-align: center;
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+
+
+/* Remove the message button styles and add star rating */
+
+
+/* Add new star rating styles */
+.star-rating {
+    color: #ffd700;
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+
+/* Add animation to review cards */
+.card-list .card-item {
+    transform: translateY(30px);
+    opacity: 0;
+    animation: slideUpFade 0.8s ease forwards;
+}
+
+/* Stagger animation for multiple cards */
+.card-list .card-item:nth-child(1) { animation-delay: 0.2s; }
+.card-list .card-item:nth-child(2) { animation-delay: 0.4s; }
+.card-list .card-item:nth-child(3) { animation-delay: 0.6s; }
+.card-list .card-item:nth-child(4) { animation-delay: 0.8s; }
+.card-list .card-item:nth-child(5) { animation-delay: 1s; }
+
+@keyframes slideUpFade {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Add hover effect */
+.card-list .card-item:hover {
+    transform: translateY(-10px);
+    transition: transform 0.5s ease;
+    box-shadow: 0 5px 15px rgba(255,255,255,0.3);
+}
+
+/* Add animation to heading */
+.reviews h1 {
+    animation: fadeInScale 0.8s ease;
+}
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@media(max-width:768px){
+    .slider-wrapper{
+        margin:0 10px 40px;
+    }
+    .slider-wrapper .swiper-slide-button{
+        display: none;
+    }
+    
+}
+
+@media (max-width: 480px) {
+
+   
+    .slider-wrapper {
+        width: 90%;
+        margin: 0 auto;
+        padding: 0 10px;
+    }
+    
+    .card-list .card-item {
+        height: auto;
+        min-height: 350px;
+        
+    }
+    
+    .card-list .card-item .user-img {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 15px;
+    }
+    
+    .card-item h2 {
+        font-size: 1.1rem;
+        margin-bottom: 10px;
+    }
+    
+   
+    
+    .star-rating {
+        font-size: 1rem;
+        margin-top: 8px;
+    }
+    .swiper-slide-button {
+        display: none;
+    }
+
+    .swiper-pagination {
+        bottom: 0 !important;
+    }
+
+    .review-container {
+        max-width: 250px;
+        padding: 10px;
+    }
+    .user-reaction {
+        font-size: 0.85rem;
+        line-height: 1.5;
+    }
+    
+    
+}
+
+
+
+
 
 
 

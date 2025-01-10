@@ -5,10 +5,37 @@ ScrollReveal().reveal('.heading > h3', { delay: 500, distance:'100px', origin: '
 // Reveal Animations for Content Image (Banners)
 ScrollReveal().reveal('.content-image', {delay: 500, scale: 0.75, duration: 1000});
 
-// Reveal Animations for Review section
-ScrollReveal().reveal('.review > q', {distance:'80px', origin:'top', duration: 1000});
-ScrollReveal().reveal('.reviewer-bio', {delay: 500, distance:'80px', origin:'top', duration: 1000});
-ScrollReveal().reveal('.reviewer-info > img', {delay: 500, scale:0});
+// Review Cards Animation
+ScrollReveal().reveal('.review-card', {
+    delay: 200,
+    distance: '50px',
+    origin: 'bottom',
+    interval: 200,
+    duration: 1000,
+    scale: 0.85
+});
+
+ScrollReveal().reveal('.stars', {
+    delay: 400,
+    scale: 0,
+    duration: 800,
+    interval: 200
+});
+
+ScrollReveal().reveal('.review-content', {
+    delay: 600,
+    distance: '30px',
+    origin: 'left',
+    duration: 800,
+    interval: 200
+});
+
+ScrollReveal().reveal('.reviewer-profile', {
+    delay: 800,
+    scale: 0.5,
+    duration: 800,
+    interval: 200
+});
 
 // Reveal Animations for Benefits section
 ScrollReveal().reveal('.benefits > p', {delay: 500, distance: '100px', origin:'left', duration: 1000});

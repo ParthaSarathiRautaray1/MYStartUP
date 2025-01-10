@@ -6,6 +6,10 @@
     <title>Utkala Voyages - Home</title>
     <link rel="stylesheet" href="css/style.css" />
     <script src="https://unpkg.com/scrollreveal"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
   </head>
   <body>
     <div id="main_wrapper">
@@ -77,6 +81,8 @@
           </h3>
         </section>
         <section class="content">
+          <!--  banner  -->
+
           <section class="blog">
             <div class="content-image">
               <div class="banner-displayer" id="banner_displayer">
@@ -118,22 +124,7 @@
                 </div>
               </div>
             </div>
-            <section class="review">
-              <q><i>Vacation is so much fun with Utkala Voyages.</i></q>
-              <section class="reviewer-info">
-                <img
-                  class="reviewer-img"
-                  src="assets/img/icons/vecteezy_rath-yatra-of-lord-jagannath-balabhadra-and-subhadra_21731440.jpg"
-                  alt="Florence Hughes Photo Profile"
-                />
-                <section class="reviewer-bio">
-                  <section class="reviewer-name">
-                    <strong>Angela Yu</strong>
-                  </section>
-                  <section class="reviewer-job"><i>London</i></section>
-                </section>
-              </section>
-            </section>
+
             <hr />
             <article class="benefits">
               <p>
@@ -244,12 +235,18 @@
                 <label for="interest_input">What are you interested in?</label>
                 <select id="interest_input" name="interest_input">
                   <option value="">Select option</option>
-                  <option value="Puri-Konark-Chilika">Puri-Konark-Chilika</option>
+                  <option value="Puri-Konark-Chilika">
+                    Puri-Konark-Chilika
+                  </option>
                   <option value="Puri-Konark">Puri-Konark</option>
                   <option value="Puri">Puri</option>
                   <option value="Travel">Travel</option>
-                  <option value="Heritage and Architecture">Heritage and Architecture</option>
-                  <option value="Nature and Wildlife">Nature and Wildlife</option>
+                  <option value="Heritage and Architecture">
+                    Heritage and Architecture
+                  </option>
+                  <option value="Nature and Wildlife">
+                    Nature and Wildlife
+                  </option>
                   <option value="Coastal Beauty">Coastal Beauty</option>
                   <option value="Other">other.</option>
                 </select>
@@ -526,7 +523,7 @@
               <div class="service-content">
                 <h4 class="service-title">Photography Services</h4>
                 <p class="description">
-                  Professional photography services to capture your memorable
+                  r-reactional photography services to capture your memorable
                   moments.
                 </p>
               </div>
@@ -534,7 +531,7 @@
           </section>
         </section>
 
-        <!-- About Us section -->
+        <!-- About Us / Why us section -->
         <section class="about-us" id="about_us">
           <section>
             <h2 class="why-us">Why Us</h2>
@@ -605,6 +602,126 @@
           </section>
         </section>
 
+        <!-- Testimonial / review section  -->
+
+        <section class="reviews">
+          <section>
+
+            <h1 class="customers-say">What Our Customers Say</h1>
+            
+          </section>
+          <div class="all-include">
+            <div class="review-body">
+              <div class="container swiper">
+                <div class="slider-wrapper">
+                  <div class="card-list swiper-wrapper">
+                    
+                    <div class="card-item swiper-slide">
+                      <img
+                        src="assets/img/reviewer/reviewer1.jpg"
+                        alt="User Image"
+                        class="user-img"
+                      />
+                      <h2 class="user-name">John Wilson</h2>
+                      <div class="review-container">
+                        <p class="user-reaction">
+                          "The Puri-Konark-Chilika tour was incredible! The guides
+                          were knowledgeable, and the local food experiences were
+                          outstanding. Utkala Voyages made our Odisha exploration
+                          truly memorable with their attention to detail."
+                        </p>
+                      </div>
+                     
+                      <div class="star-rating">★★★★★</div>
+                    </div>
+
+                    <div class="card-item swiper-slide">
+                      <img
+                        src="assets/img/reviewer/reviewer2.jpg"
+                        alt="User Image"
+                        class="user-img"
+                      />
+                      <h2 class="user-name">Sarah Johnson</h2>
+                      <div class="review-container">
+                        <p class="user-reaction">
+                          "As a photography enthusiast, I was amazed by the
+                          special arrangements made for capturing sunrise at Puri
+                          beach and the architectural details of Konark Temple.
+                          Their photography-focused service exceeded my
+                          expectations!"
+                        </p>
+                      </div>
+                      
+                      <div class="star-rating">★★★★★</div>
+                    </div>
+
+                    <div class="card-item swiper-slide">
+                      <img
+                        src="assets/img/reviewer/reviewer3.jpg"
+                        alt="User Image"
+                        class="user-img"
+                      />
+                      <h2 class="user-name">Daniel Anderson</h2>
+                      <div class="review-container">
+                        <p class="user-reaction">
+                          "The seamless coordination of accommodation, transport,
+                          and guided tours made our family trip stress-free. The
+                          local insights and cultural experiences provided by
+                          Utkala Voyages were truly authentic."
+                        </p>
+                      </div>
+                      
+                      <div class="star-rating">★★★★★</div>
+                    </div>
+
+                    <div class="card-item swiper-slide">
+                      <img
+                        src="assets/img/reviewer/reviewer4.jpg"
+                        alt="User Image"
+                        class="user-img"
+                      />
+                      <h2 class="user-name">Emily Devins</h2>
+                      <div class="review-container">
+                        <p class="user-reaction">
+                          "Their 24/7 support was remarkable! When we wanted to
+                          extend our stay in Chilika to watch more migratory
+                          birds, they quickly arranged everything. The customized
+                          itinerary perfectly matched our interests."
+                        </p>
+                      </div>
+                      
+                      <div class="star-rating">★★★★★</div>
+                    </div>
+
+                    <div class="card-item swiper-slide">
+                      <img
+                        src="assets/img/reviewer/reviewer5.jpg"
+                        alt="User Image"
+                        class="user-img"
+                      />
+                      <h2 class="user-name">David Thomson</h2>
+                      <div class="review-container">
+                        <p class="user-reaction">
+                          "The spiritual experience at Jagannath Temple and the
+                          cultural insights shared by their expert guides were
+                          profound. Utkala Voyages helped us discover the soul of
+                          Odisha in the most comfortable way."
+                        </p>
+                      </div>
+                      
+                      <div class="star-rating">★★★★★</div>
+                    </div>
+                  </div>
+                  <div class="swiper-pagination"></div>
+                  <div class="swiper-slide-button swiper-button-prev"></div>
+                  <div class="swiper-slide-button swiper-button-next"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Call us part -->
         <section class="closing" id="call_us">
           <div>
             <h2>Ready for Your Next Adventure?</h2>
@@ -670,11 +787,11 @@
       </footer>
     </div>
     <script src="js/scroll-animations.js"></script>
-    <script src="js/script.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script src="js/email-automation.js"></script>
-    
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>
 
