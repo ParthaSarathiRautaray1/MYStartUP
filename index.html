@@ -10,6 +10,17 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
+    <style>
+      .car-marker i {
+        color: #e74c3c;
+        font-size: 24px;
+      }
+    </style>
   </head>
   <body>
     <div id="main_wrapper">
@@ -259,7 +270,7 @@
           </aside>
         </section>
 
-        <!-- CARDS  -->
+        <!-- CARDS / Package section -->
         <section class="our-package" id="our_package">
           <section>
             <h2>Our Package</h2>
@@ -431,6 +442,16 @@
               </div>
             </article>
           </section>
+        </section>
+
+        <!-- map animation -->
+
+        <section class="journey-map" id="journey_map">
+          <section>
+            <h2>Follow Our Journey Route</h2>
+          </section>
+          
+          <div id="map"></div>
         </section>
 
         <!-- Service section -->
@@ -606,16 +627,13 @@
 
         <section class="reviews">
           <section>
-
             <h1 class="customers-say">What Our Customers Say</h1>
-            
           </section>
           <div class="all-include">
             <div class="review-body">
               <div class="container swiper">
                 <div class="slider-wrapper">
                   <div class="card-list swiper-wrapper">
-                    
                     <div class="card-item swiper-slide">
                       <img
                         src="assets/img/reviewer/reviewer1.jpg"
@@ -625,13 +643,14 @@
                       <h2 class="user-name">John Wilson</h2>
                       <div class="review-container">
                         <p class="user-reaction">
-                          "The Puri-Konark-Chilika tour was incredible! The guides
-                          were knowledgeable, and the local food experiences were
-                          outstanding. Utkala Voyages made our Odisha exploration
-                          truly memorable with their attention to detail."
+                          "The Puri-Konark-Chilika tour was incredible! The
+                          guides were knowledgeable, and the local food
+                          experiences were outstanding. Utkala Voyages made our
+                          Odisha exploration truly memorable with their
+                          attention to detail."
                         </p>
                       </div>
-                     
+
                       <div class="star-rating">★★★★★</div>
                     </div>
 
@@ -645,13 +664,13 @@
                       <div class="review-container">
                         <p class="user-reaction">
                           "As a photography enthusiast, I was amazed by the
-                          special arrangements made for capturing sunrise at Puri
-                          beach and the architectural details of Konark Temple.
-                          Their photography-focused service exceeded my
+                          special arrangements made for capturing sunrise at
+                          Puri beach and the architectural details of Konark
+                          Temple. Their photography-focused service exceeded my
                           expectations!"
                         </p>
                       </div>
-                      
+
                       <div class="star-rating">★★★★★</div>
                     </div>
 
@@ -664,13 +683,14 @@
                       <h2 class="user-name">Daniel Anderson</h2>
                       <div class="review-container">
                         <p class="user-reaction">
-                          "The seamless coordination of accommodation, transport,
-                          and guided tours made our family trip stress-free. The
-                          local insights and cultural experiences provided by
-                          Utkala Voyages were truly authentic."
+                          "The seamless coordination of accommodation,
+                          transport, and guided tours made our family trip
+                          stress-free. The local insights and cultural
+                          experiences provided by Utkala Voyages were truly
+                          authentic."
                         </p>
                       </div>
-                      
+
                       <div class="star-rating">★★★★★</div>
                     </div>
 
@@ -685,11 +705,11 @@
                         <p class="user-reaction">
                           "Their 24/7 support was remarkable! When we wanted to
                           extend our stay in Chilika to watch more migratory
-                          birds, they quickly arranged everything. The customized
-                          itinerary perfectly matched our interests."
+                          birds, they quickly arranged everything. The
+                          customized itinerary perfectly matched our interests."
                         </p>
                       </div>
-                      
+
                       <div class="star-rating">★★★★★</div>
                     </div>
 
@@ -704,11 +724,11 @@
                         <p class="user-reaction">
                           "The spiritual experience at Jagannath Temple and the
                           cultural insights shared by their expert guides were
-                          profound. Utkala Voyages helped us discover the soul of
-                          Odisha in the most comfortable way."
+                          profound. Utkala Voyages helped us discover the soul
+                          of Odisha in the most comfortable way."
                         </p>
                       </div>
-                      
+
                       <div class="star-rating">★★★★★</div>
                     </div>
                   </div>
@@ -792,6 +812,9 @@
     <script src="js/email-automation.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="js/map-animation.js"></script>
   </body>
 </html>
 

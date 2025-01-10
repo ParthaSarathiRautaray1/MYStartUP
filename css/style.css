@@ -1086,10 +1086,32 @@ input.error, select.error {
     
 }
 
+/* map animation */
+.journey-map {
+    padding: 4rem 0;
+    background: #f8f8f8;
+    text-align: center;
+  }
+  
+  #map {
+    height: 400px;
+    width: 90%;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    margin: 2rem auto;
+  }
+
+  .journey-map h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #333;
+}
+  
 
 
 
-
+  /*  */
 
 
 
