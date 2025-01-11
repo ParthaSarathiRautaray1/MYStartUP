@@ -476,6 +476,37 @@ input.error, select.error {
       font-size: 1.1rem;
   }
 
+
+  .pdf-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin: 15px 0;
+}
+
+.pdf-btn {
+    background: var(--polynesian-blue);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.pdf-btn:hover {
+    background: var(--safron);
+    transform: translateY(-2px);
+}
+
+.pdf-btn i {
+    font-size: 1rem;
+}
+
+
+
   /* Responsive adjustments */
   @media screen and (max-width: 1024px) {
     .package-image {
@@ -1375,6 +1406,44 @@ input.error, select.error {
     }
   }
   
+
+  .floating-call-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: var(--polynesian-blue);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    z-index: 1000;
+    animation: pulse 1.5s infinite;
+    cursor: pointer;
+}
+
+.floating-call-btn i {
+    color: white;
+    font-size: 24px;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    }
+    70% {
+        transform: scale(1.1);
+        box-shadow: 0 0 16px rgba(0,0,0,0.5);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    }
+}
+
 
 
 
