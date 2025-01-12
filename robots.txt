@@ -1,4 +1,3 @@
-
 User-agent: *
 Allow: /
-Sitemap: https://utkalavoyages.com/sitemap.xml
+Sitemap: https://my-start-up-psi.vercel.app/sitemap.xml
