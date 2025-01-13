@@ -16,7 +16,7 @@
     --dark-gray: #667881;
     --light-gray: #d4d4d4;
     --safron: #f3c318ff;
-    --polynesian-blue: #004e89ff;
+    --polynesian-blue: rgb(9, 124, 211);
     /* FONT SIZE */
     --step--2: clamp(0.7813rem, 0.7747rem + 0.0326vw, 0.8rem);
     --step--1: clamp(0.9375rem, 0.9158rem + 0.1087vw, 1rem);
@@ -90,7 +90,7 @@ body {
 
 .logo {
     color: var(--polynesian-blue);
-    font-family: "Caveat", cursive;
+    font-family: "Roboto", cursive;
     font-optical-sizing: auto;
     font-weight: 700;
     font-style: normal;
@@ -124,6 +124,44 @@ header {
 :where(header, .header-filler) .logo {
     color: inherit;
 }
+
+@media screen and (max-width: 768px) {
+    .heading {
+        padding: 4rem 1rem; /* Reduced padding */
+    }
+
+    .heading h1 {
+        font-size: var(--step-3); /* Smaller font size for h1 */
+        line-height: 1.2;
+    }
+    .defination{
+        font-size: 1 rem;
+    }
+
+    .heading h3 {
+        font-size: var(--step-1); /* Smaller font size for h3 */
+    }
+
+    .logo {
+        font-size: var(--step-1); /* Smaller brand name */
+        white-space: nowrap; /* Keep brand name in one line */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .heading {
+        padding: 3rem 1rem; /* Further reduced padding for smaller devices */
+    }
+
+    .heading h1 {
+        font-size: var(--step-2); /* Even smaller font size for h1 */
+    }
+
+    .heading h3 {
+        font-size: var(--step-0); /* Even smaller font size for h3 */
+    }
+}
+
 
 
 
@@ -190,7 +228,7 @@ main > :where(section:not(.our-package)) {
 }
 
 .heading {
-    padding: 6.25rem 2rem;
+    padding: 4rem 2rem 2rem 2rem;
 }
 
 .heading :is(h1, h3) {
@@ -204,11 +242,13 @@ main > :where(section:not(.our-package)) {
 }
 
 /* CONTENT */
+
 .content {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     gap: 4rem 1.5rem;
+    margin-top: 2rem;
 }
 
 .content .blog {
@@ -216,6 +256,7 @@ main > :where(section:not(.our-package)) {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+    
 }
 
 :where(.blog, .our-package) > hr {
@@ -231,7 +272,7 @@ main > :where(section:not(.our-package)) {
     border-radius: 14px;
 
   
-    aspect-ratio: 16/12;
+    aspect-ratio: 16/14;
 
 }
 
@@ -263,14 +304,18 @@ aside {
     display: flex;
     flex-direction: column;
     gap: 2rem;
+
+    max-height: 600px; /* Matches typical blog section height */
+    overflow-y: auto; 
 }
 
-aside :is(input, select) {
+aside :is(input, select , button) {
     background-color: var(--white);
+    padding: 0.75rem .5rem;
 }
 
 aside .contact-us-title > * {
-    margin-block-end: 1em;
+    margin-block-end: 0.5em; 
 }
 
 aside .contact-us-title > p {
@@ -280,7 +325,7 @@ aside .contact-us-title > p {
 aside form {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 1rem; 
 }
 
 aside label {
@@ -313,58 +358,49 @@ input.error, select.error {
 
 
 
-/* REVIEW SECTION */
-
-
-
-
-
-
-
-
-/* BENEFITS */
-.benefits {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
+.heading {
+    padding: 4rem 2rem 2rem 2rem; /* Reduced bottom padding */
 }
 
-.benefits > p {
-    width: min(100%, 36rem);
+.content {
+    margin-top: 2rem; /* Add smaller top margin to content */
 }
 
-.benefits-list {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
+@media screen and (max-width: 768px) {
+    .heading {
+        padding: 3rem 1rem 1rem 1rem; /* Even less padding on mobile */
+    }
+    
+    .content {
+        margin-top: 1rem; /* Smaller margin on mobile */
+    }
 }
 
-.benefits-list > div {
-    color: var(--dark-gray);
-    display: flex;
-    align-items:  center;
-    gap: 1.5rem;
-    width: min(100%, 30rem);
+@media screen and (max-width: 768px) {
+    aside {
+        max-height: none;
+        overflow-y: visible;
+        padding: 2rem;
+    }
+
+    aside form {
+        gap: 0.75rem; /* Tighter form spacing */
+    }
+
+    aside :is(input, select, button) {
+        padding: 0.5rem; /* Smaller input fields */
+    }
+
+    aside .contact-us-title {
+        margin-bottom: 1rem;
+    }
 }
 
-.benefits-list > div > :first-child {
-    color: var(--white);
-    background-color: var(--polynesian-blue);
-    width: 1rem;
-    height: 1rem;
-    font-weight: 900;
-    padding: 1.5rem;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
-.benefits-list > :nth-child(even) > :first-child {
-    color: var(--black);
-    background-color: var(--safron);
-  
-}
+
+
+
+
 
 /* OUR PACKAGES SECTION */
 
@@ -526,6 +562,11 @@ input.error, select.error {
     color: var(--safron);
 }
 
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-3px); }
+}
+
 
 /* Adjust responsive heights */
 @media screen and (max-width: 768px) {
@@ -535,6 +576,41 @@ input.error, select.error {
 
     .package-image {
         height: 300px;
+    }
+    .basket-footer {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+        text-align: center;
+    }
+
+    .package-price {
+        font-size: var(--step-0);
+    }
+
+    .package-price strong {
+        display: block;
+        margin-top: 0.5rem;
+        color: var(--polynesian-blue);
+        font-size: var(--step-1);
+    }
+
+    .download-btn {
+        width: 100%;
+        justify-content: center;
+        font-size: var(--step--1);
+        padding: 0.75rem 1.5rem;
+        background: linear-gradient(45deg, var(--polynesian-blue), #2980b9);
+        transform-origin: center;
+        transition: all 0.3s ease;
+    }
+    .download-btn:hover {
+        transform: scale(1.05);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    .download-btn i {
+        animation: bounce 1s infinite;
     }
 }
 
