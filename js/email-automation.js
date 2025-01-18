@@ -18,7 +18,7 @@ document.getElementById('contact_us_form').addEventListener('submit', function(e
         to_name: formData.name,
         to_email: formData.email,
         interest: formData.interest,
-        pdf_link: "https://drive.google.com/file/d/1E0I4TrUxbIOrkC2G6kLSWXM1WZ8IECwg/view?usp=drive_link",
+        pdf_link: "https://drive.google.com/file/d/12u-AX4COI1KxGWASaxiDV_o-tfo9GXSB/view?usp=sharing",
         message: `Here's your travel guide for ${formData.interest} packages`
     })
     // .then(() => {
